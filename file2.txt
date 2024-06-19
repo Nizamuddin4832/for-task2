@@ -6,12 +6,12 @@ read num
 # if user entered 0 it will not execute else it will execute
 if [ $num -ne 0 ]
 then 
-   if [ $((num/3)) -a $((num/7)) ]
-   then 
-        echo " It is divisible by 3 and 7 "
-   else
-        echo " it is not divisible 3 and 7 "
-   fi 
+    if [ $(( num/3 )) -o $(( num/7 )) ]
+    then 
+             echo " It is divisible by 3 and 7 "
+    else
+             echo " it is not divisible by 3 and 7 "
+    fi 
 else 
     echo " please enter above 0 "
 fi
